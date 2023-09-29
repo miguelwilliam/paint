@@ -2,11 +2,11 @@
 
 Exercises
 
-1. Add a color.
+1. Add a color. COMPLETO
 2. Complete circle. COMPLETO
 3. Complete rectangle. COMPLETO
-4. Complete triangle.
-5. Add width parameter.
+4. Complete triangle. COMPLETO
+5. Add width parameter. COMPLETO
 """
 
 from turtle import *
@@ -65,8 +65,12 @@ def triangle(start, end):
     down()
     begin_fill()
 
-    goto(end.x, start.y)
-    goto(((end.x-start.x)/2)+start.x, end.y)
+    #goto(end.x, start.y)
+    #goto(((end.x-start.x)/2)+start.x, end.y)
+    #goto(start.x, start.y)
+
+    goto(end.x*2-start.x, start.y)
+    goto(end.x, end.y)
     goto(start.x, start.y)
 
     end_fill()
@@ -95,11 +99,20 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
-onkey(lambda: color('black'), 'K')
-onkey(lambda: color('white'), 'W')
-onkey(lambda: color('green'), 'G')
-onkey(lambda: color('blue'), 'B')
-onkey(lambda: color('red'), 'R')
+onkey(lambda: width(1), '1')
+onkey(lambda: width(2), '2')
+onkey(lambda: width(3), '3')
+onkey(lambda: width(4), '4')
+onkey(lambda: width(5), '5')
+onkey(lambda: width(6), '6')
+onkey(lambda: width(7), '7')
+onkey(lambda: width(8), '8')
+onkey(lambda: width(9), '9')
+onkey(lambda: color('black'), 'k')
+onkey(lambda: color('white'), 'w')
+onkey(lambda: color('green'), 'g')
+onkey(lambda: color('blue'), 'b')
+onkey(lambda: color('red'), 'r')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circulo), 'c')
